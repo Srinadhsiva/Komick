@@ -12,7 +12,7 @@ const Auth = () => {
       const endpoint = isLogin ? '/login' : '/signup';
       const payload = { username, password } 
       try {
-        const { data } = await axios.post(`api${endpoint}`, payload);
+        const { data } = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api${endpoint}`, payload);
         if (isLogin) localStorage.setItem('token', data.token);
         window.location.href = '/user'
       } catch (error) {
