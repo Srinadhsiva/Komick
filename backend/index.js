@@ -3,7 +3,6 @@ const app = express()
 const cors = require('cors')
 const router = require('./routes/router')
 const {cloudinaryConfig} = require('./config/cloudinaryConfig')
-const path = require('path')
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
