@@ -1,0 +1,116 @@
+.header{
+    background-color: #0f2133;
+    box-shadow: rgb(47, 39, 39) px 0px 100px 50px;
+    width: 100%;
+    box-shadow: black 0px 10px 30px 40px;
+    padding: 3px;
+}
+.header nav{
+    margin: 0px 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .title{
+    font-weight :large;
+    font-size : 30px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: rgb(58, 83, 33);
+}
+.elements{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.elements img{
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+}
+.elements button{
+    color: white;
+    background-color: rgb(46, 37, 81);
+    border: none;
+}
+.elements input{
+        margin-left: 20px;
+        background: transparent;
+        color:grey;
+        border: none;
+        transition: all 0.3s ease;
+        background-color: #06121e;
+        width: 220px;
+        
+        &:active, &:focus { 
+            outline: none;
+        }
+}
+
+.hamburger-menu{
+    display: none;
+}
+
+
+@media (max-width:620px){
+    .elements .hamburger-menu{
+        display: block;
+        background: #0f2133;
+    }
+    .search-items{
+        display: none;
+    }
+    nav .title{
+        font-size: 27px;
+    }
+    .elements{
+        justify-content: space-between;
+    }
+
+}
+.header .search-results .suggestion-container{
+    position: absolute;
+    top:15px;
+    right: 8%;
+    z-index: 10;
+    list-style:none;
+    padding: 0px;
+    width: 190px;
+    justify-self: end;
+    overflow: hidden;
+}
+.search-results .suggestions img{
+    width:30px;
+    height: 40px;
+    object-fit: cover;    
+    object-position: top;
+    margin-right: 5px;
+}
+.search-results .suggestions{
+    max-height: 40px;
+}
+.search-results .suggestions p{
+    display: inline;
+    margin:0;
+    font-size: 8px;
+}
+.search-results .suggestions{
+    background-color: black;
+    margin-bottom: 1px;
+}
+.search-results{
+    position: relative;
+}
+.search-results a{
+    text-decoration: none;
+}
+.login-img{
+    object-fit: cover;
+    object-position: top;
+}
+
+@media (max-width: 900px) {
+    .header .search-results .suggestion-container{
+        right: 12%;
+    }
+}

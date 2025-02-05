@@ -1,0 +1,108 @@
+.comic-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.chapter-list{
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    max-height: 200px;
+    overflow-y: auto;
+    gap: 10px;
+    background-color: rgb(5, 4, 4);
+    margin: 5%;
+    width: 50vw;
+}
+
+.chapter-list a{
+    background-color: rgb(9, 9, 9);
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+.comic-img{
+    transition: transform ease;
+    transition-duration: 0.6s ;
+}
+.comic-img:hover{
+    transform: scale(1.1);
+    box-shadow: rgb(174, 170, 170) 0px 8px 20px 2px , rgba(180, 176, 176, 0.77) 0px -8px 20px 2px;
+}
+.img-container-comicpage{
+    display: flex;
+    justify-self: center;
+    width: 270px;
+    height: 380px;
+    margin: 20px;
+}
+.img-container-comicpage:hover{
+    margin-bottom: 40px;
+    transition: all 1s ease;
+}
+.comic-page h1,h3, p{
+    color: white;
+}
+.info{
+    text-align: left;
+}
+
+.img-container-comicpage img{
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.description{
+    max-width: 70vw;
+    max-height: 80px;
+    overflow: hidden;
+}
+.description p{
+    color: rgb(157, 154, 154);
+    margin: 0px;
+}
+
+.read-more{
+    cursor: pointer;
+    color: red;
+}
+@media (max-width: 620px) {
+    .chapter-list{
+        grid-template-columns: 6fr 6fr;
+        width: 300px;
+    }
+    .img-container-comicpage{
+        display: flex;
+        justify-self: center;
+        width: 190px;
+        height: 250px;
+    }
+}
+
+.comic-page .rating{
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.star-container{
+    display: flex;
+    align-items: center;
+    color:white;
+    justify-content: center;
+}
+.star-container span{
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.rating-button {
+    color: white;
+    background-color: rgb(46, 37, 81);
+    border: none;
+    border-radius: 4px;
+    padding: 6px;
+    margin-top: 20px;
+}

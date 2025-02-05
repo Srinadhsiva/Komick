@@ -1,0 +1,143 @@
+
+  
+  /* User Page Container */
+  .user-page {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #020d18;
+  }
+  
+  /* Header */
+  .user-header {
+    text-align: center;
+    background-color: #4a90e2;
+    color: white;
+    padding: 15px 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .user-header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  /* User Profile Section */
+  .user-profile {
+   color: white;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border:  1px solid black;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  .user-profile h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  /* favouriteed Manhwas Section */
+  .favouriteed-manhwas {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .favourite-manhwas h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid #7f8183;
+    padding-bottom: 5px;
+  }
+  
+  .favourite-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .favourite-item {
+    width: calc(33.33% - 10px); /* Responsive layout */
+    max-width: 150px;
+    height: 220px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+  }
+  .favourite-item img{
+    height: 90%;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  .favourite-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .favourite-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .favourite-item p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  @media(max-width: 470px){
+    .favourite-item{
+        min-height: 130px;
+    }
+  }
+
+.profile-button{
+    color: white;
+    background-color: rgb(46, 37, 81);
+    border: none;
+    border-radius: 4px;
+    padding: 6px;
+    margin: 5px;
+}
+.home-button{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 8px;
+  background-color: black;
+  width:30px;
+  height: 30px;
+  outline: none;
+  border: 0;
+}
+.home-button img{
+  width:100%;
+  height: 100%;
+  background: rgb(46, 37, 81, 0.5);  
+  object-fit: cover;
+  transform: scaleX(1.4) scaleY(1.2);
+}

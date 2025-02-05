@@ -1,0 +1,16 @@
+.authorize-container form{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    height: 30vh;
+    margin:5%;
+}
+.authorize-container form button{
+    color: white;
+    background-color: rgb(46, 37, 81);
+    border: none;
+    border-radius: 4px;
+    padding: 6px;
+}

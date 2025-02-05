@@ -1,0 +1,23 @@
+#authors-page{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#authors-page button{
+    display: inline-block;
+}
+#authors-page span{
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+}
+#authors-page span label{
+    min-width: 90px;
+}
+#authors-page span label input{
+    margin-right: 7px;
+    cursor: pointer;
+}

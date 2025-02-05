@@ -1,0 +1,23 @@
+.select-profile{
+    width: 120px;
+    height:110px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 80px;
+}
+.select{
+    display: flex ;
+    gap: 8px; 
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    flex-wrap: wrap
+
+}

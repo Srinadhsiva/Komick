@@ -1,0 +1,40 @@
+.new-comic-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.new-comic-container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.new-comic-container form p{
+    margin: 20px;
+}
+
+.new-comic-container form input[type="file"] {
+    /* Optional styling for better appearance */
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 60px;
+}
+.choose-file-container{
+    justify-self: center!important;
+}
+
+
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
