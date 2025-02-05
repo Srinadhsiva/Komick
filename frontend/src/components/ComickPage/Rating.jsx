@@ -38,7 +38,7 @@ const StarRating = ({ rating, maxStars = 5, filledColor = "gold", emptyColor = "
     };
 
     async function handleRatingSubmit() {
-        const res = await fetch(`/api/rating/${id}`,{
+        const res = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/rating/${id}`,{
             method:'PUT',
             headers: {
                 'Content-Type': 'application/json'

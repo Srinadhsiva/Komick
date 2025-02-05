@@ -21,7 +21,7 @@ export default function FavoriteButton({id}) {
         else{            
             localStorage.setItem('favourites',JSON.stringify(favourites.filter(item => item !== id)))
         }     
-        await axios.post('/api/updatefavourites',
+        await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/updatefavourites`,
             {userId:localStorage.getItem('userId') , comicId: id , action:isFavorite ? 'remove' : 'add' }
         )
         

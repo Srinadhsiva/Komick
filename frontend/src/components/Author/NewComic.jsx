@@ -39,7 +39,7 @@ const NewComicPage = () => {
         formData.append('thumbnail-image', thumbnail);
     }
     try{
-    const response = await fetch('/api/author/new', {
+    const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/author/new`, {
         method: 'POST',
         body: formData,
     })

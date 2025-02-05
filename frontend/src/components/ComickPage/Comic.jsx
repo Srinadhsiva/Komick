@@ -19,7 +19,7 @@ function handleClick(){
   const {id}  = useParams()
   React.useEffect(()=>{
     async function getComicDetails(id) {
-      const result = await fetch(`/api/m/${id}`)
+      const result = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/m/${id}`)
       const data = await result.json()
       const value = data[0]
       setValue(value)

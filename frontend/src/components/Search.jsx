@@ -19,7 +19,7 @@ const Search = () => {
         if(query.length < 2){
           setResults([])
         }
-        const res = await fetch(`/api/comic/search?q=${query}`)
+        const res = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/comic/search?q=${query}`)
         const data =  await res.json()
         setResults(data)
       }

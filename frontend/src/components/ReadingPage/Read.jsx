@@ -26,7 +26,7 @@ const Read= () => {
 
     // data fetching
     async function getChapterImages(){
-        const response = await fetch(`/api/m/read/${name}/${chapternumber}/${id}`)
+        const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/m/read/${name}/${chapternumber}/${id}`)
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);

@@ -20,14 +20,14 @@ async function handleChange(q){
       setResult([])
       setComic('')
     }
-    const data = await fetch(`/api/comic/search?q=${q}`)
+    const data = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/comic/search?q=${q}`)
     const res = await data.json()
     setResult(res)
 } 
 
 async function handleSubmit(event){
   event.preventDefault()
-  const data = await fetch(`/api/comic/search?q=${query}`)
+  const data = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/comic/search?q=${query}`)
   res = await data.json()
   setComic(res[0])
 }
@@ -46,7 +46,7 @@ async function handleUploads(event){
       }
       formdata.append('name',comic.name)
       formdata.append('id',comic._id)
-      const result = await fetch('/api/author/update' ,{
+      const result = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/author/update` ,{
         method: 'POST',
         body: formdata
       })

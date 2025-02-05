@@ -4,7 +4,7 @@ const Authorize = ({setauthorized}) => {
     async function handleSubmit(event){
         event.preventDefault()
         const form = new FormData(event.target)
-        const response = await fetch('/api/authorize/author',{
+        const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/authorize/author`,{
             method:'POST',
             body:form
         })
@@ -17,7 +17,7 @@ const Authorize = ({setauthorized}) => {
     }
   return (
     <section className='authorize-container'>
-            <form action="/api/authorize"  method='POST' onSubmit={handleSubmit} id='authorize-author-form'>
+            <form  method='POST' onSubmit={handleSubmit} id='authorize-author-form'>
                 <label htmlFor="input">
                 Username<input type="text" required name='name' />             
                 </label>

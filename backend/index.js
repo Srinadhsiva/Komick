@@ -12,8 +12,4 @@ app.use(express.static(frontendPath));
 app.use('*', cloudinaryConfig);
 app.use(cors())
 app.use('/',router)
-app.use((req, res, next) => {
-    res.sendFile(path.join(frontendPath, 'index.html'));
-});
-  
-module.exports = app;
+

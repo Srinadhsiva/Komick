@@ -7,7 +7,7 @@ const Chooseprofile = ({select}) => {
     const [selectedImage, setSelectedImage] = React.useState(null);
 
     const handleImageClick = (val) => {
-        axios.put('/api/profilechoice',{
+        axios.put(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/profilechoice`,{
             id:id,
             val:val
         }).then(res => {

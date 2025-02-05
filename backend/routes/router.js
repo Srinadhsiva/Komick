@@ -22,7 +22,7 @@ const {login,
      signup, 
       checkSession} = require('../authorize/userauth.js')
 
-router.get('/api/user',async(req,res)=>{
+router.get(`/api/user`,async(req,res)=>{
     try
     {
         const users = await fetchUsers()

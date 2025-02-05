@@ -19,7 +19,7 @@ const [user, setUser] = React.useState({})
       const headers = token
       ? { Authorization: `Bearer ${token}` }
       : {};
-      const result = await fetch("/api/checksession", {
+      const result = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/checksession`, {
         method: "GET",  // Add method (default is GET, but it's good practice to specify)
         headers: headers
       });
@@ -37,7 +37,7 @@ const [user, setUser] = React.useState({})
 
     async function getRecent() {
             try {
-                const response = await fetch('/api/comics'); 
+                const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/comics`); 
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }

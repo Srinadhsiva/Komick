@@ -18,12 +18,12 @@ const UserPage = () => {
   const token = localStorage.getItem('token')
   if (!token) <Navigate to='/auth' replace/>
   useEffect(()=>{
-    axios.get('/api/checksession',{
+    axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/checksession`,{
       headers:{Authorization:`Bearer ${token}` }
     } 
     )
     .then(response => {setUser(response.data)
-          axios.post('/api/favourites',{
+          axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/favourites`,{
             favourites:response.data.favourites
           }).then(res => {
             setFavourites(res.data)
