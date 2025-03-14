@@ -5,8 +5,13 @@ import axios from "axios";
 
 export default function FavoriteButton({id}) {
   const [isFavorite, setIsFavorite] = useState(false);
-  
-  const favourites = JSON.parse(localStorage.getItem('favourites') || '[]');
+  let favourites;
+  if(!localStorage.getItem('favourites')){
+    favourites = JSON.parse(localStorage.getItem('favourites'));
+  }
+  else{
+    favourites = []
+  }
   const loggedIn = Boolean(localStorage.getItem('token')) || false  
     useEffect(() => {
         if (loggedIn && favourites.some(item => item=== id)) {
