@@ -7,7 +7,7 @@ const {cloudinaryConfig} = require('./config/cloudinaryConfig')
 app.use(cors({
     origin: 'https://komick-livid.vercel.app',// Allow only your frontend
     methods: 'GET,POST,PUT,DELETE',
-    allowedHeaders: 'Content-Type,Authorization',
+    allowedHeaders: '*',
     credentials: true, // Allow cookies (if needed)
   }));
 
