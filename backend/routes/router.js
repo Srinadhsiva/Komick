@@ -2,6 +2,15 @@ const express = require('express');
 const router = express.Router();
 const fetchUsers = require('../controller/users')
 const {upload,  newComic, updateComic} = require('../controller/comic')
+const cors = require('cors');
+const corsOptions = {
+  origin: "https://komick-livid.vercel.app",
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+
 const{getComicsByRecentUpdated, 
     getChapterImagesfromCloudinary, 
     getComicDetails,
@@ -36,9 +45,11 @@ router.get(`/api/user`,async(req,res)=>{
 router.get('/api/comics',async(req,res)=>{
     res.send({recentupdates:await getComicsByRecentUpdated(), toppicks: await getComicsByClickCount()})
 })
-
+//
+router.options("/api/author/new", cors(corsOptions));
 router.post(
     '/api/author/new',
+    cors(corsOptions),
     upload.fields([
         { name: 'chapter-files', maxCount: 500 },
         { name: 'thumbnail-image', maxCount: 1 },
