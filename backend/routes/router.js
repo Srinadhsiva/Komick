@@ -37,13 +37,6 @@ router.get('/api/comics',async(req,res)=>{
     res.send({recentupdates:await getComicsByRecentUpdated(), toppicks: await getComicsByClickCount()})
 })
 
-
-router.options("/api/author/new",cors({
-    origin: 'https://komick-livid.vercel.app',// Allow only your frontend
-    methods: 'GET,POST,PUT,DELETE',
-    allowedHeaders: '*',
-    credentials: true, // Allow cookies (if needed)
-  }));
 router.post(
     '/api/author/new',
     upload.fields([
