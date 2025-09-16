@@ -4,12 +4,14 @@ const cors = require('cors')
 const router = require('./routes/router')
 const {cloudinaryConfig} = require('./config/cloudinaryConfig')
 
-app.use(cors({
-    origin: 'https://komick-livid.vercel.app',// Allow only your frontend
-    methods: 'GET,POST,PUT,DELETE',
-    allowedHeaders: '*',
-    credentials: true, // Allow cookies (if needed)
-  }));
+const corsOptions = {
+  origin: "https://komick-livid.vercel.app",
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+app.use(cors(corsOptions));
+app.options('/api/author/new', cors(corsOptions));
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
